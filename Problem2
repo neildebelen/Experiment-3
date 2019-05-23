@@ -1,0 +1,44 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void setTemp(int ProvA[], int ProvB[], int ProvC[]){
+  cout<<"Kindly type all of the temperature that is recorded from Province A, Province B and Province C."<<endl<<endl;
+
+  for (int i=1; i<=7; i++){
+    cout<<"Province A, Day "<<i<<":";
+    cin>>ProvA[i];
+  }
+  for (int i=1; i<=7; i++){
+    cout<<"Province B, Day "<<i<<":";
+    cin>>ProvB[i];
+  }
+  for (int i=1; i<=7; i++){
+    cout<<"Province C, Day "<<i<<":";
+    cin>>ProvC[i];
+  }
+}
+
+void getTemp(int ProvA[], int ProvB[], int ProvC[]){
+  for (int i=1; i<=7; i++){
+    cout<<"Province A, Day "<<i<<"="<<ProvA[i]<<endl;
+  }
+  for (int i=1; i<=7; i++){
+    cout<<"Province B, Day "<<i<<"="<<ProvB[i]<<endl;
+  }
+  for (int i=1; i<=7; i++){
+    cout<<"Province C, Day "<<i<<"="<<ProvC[i]<<endl;
+  }
+}
+
+int main() {
+  int ProvA[7], ProvB[7], ProvC[7];
+  setTemp(ProvA, ProvB, ProvC);
+  cout<<endl<<"Displaying Values:"<<endl;
+  getTemp(ProvA, ProvB, ProvC);
+  
+  
+    return 0;
+    _getch();
+}
