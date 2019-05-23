@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+
+
+using namespace std;
+int main()
+{
+char character[5];
+int i, j;
+	
+	for (i=0; i < 5; i++)
+	{
+		cout << "Kindly enter any character or number: ";
+		cin>>character[i];
+	}
+	
+	for(i=0;i<4; i++)
+    {
+    	for(j=i+1;j<5; j++)
+    	{
+    		int temp;
+    		if(character[i] < character[j])
+    		{
+    			temp = character[i];
+    			character[i] = character[j];
+    			character[j] = temp;
+			}
+    		
+		}
+	}
+	cout<< "Reverse order are: ";
+	cout<<endl;
+	for (i=0; i<5; i++)
+	{
+		cout<<character[i]<<", ";
+	}
+	
+        
+_getch();        
+return 0;
+}
